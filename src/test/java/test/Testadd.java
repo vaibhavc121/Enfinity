@@ -11,7 +11,7 @@ public class Testadd extends Add
 	public void test()
 	{
 		int exp=4;
-		int act=add(2, 2);
+		int act=add(2, 3);
 		Assert.assertEquals(act, exp);
 	}
 	
