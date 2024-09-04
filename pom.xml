@@ -5,6 +5,29 @@
 	<groupId>Enfinity</groupId>
 	<artifactId>Enfinity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+		<build>
+		<!-- To define the plugin version in your parent POM -->
+		<pluginManagement>
+			<plugins>		
+				
+				<!--for running the project-->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.5.0</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<!--<suiteXmlFile>grouping.xml</suiteXmlFile>-->
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+
+	</build>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -14,6 +37,7 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
+
+	
 </project>
